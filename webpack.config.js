@@ -1,6 +1,8 @@
 const path = require("path");
 const HTMLTemplate = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { HotModuleReplacementPlugin } = require("webpack");
 
 module.exports = {
   entry: {
@@ -20,7 +22,13 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"], //Added scss support
+        // use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"], //Added scss support
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
+        ], //Added scss support
       },
       {
         test: /\.(png|jpg)$/,
@@ -35,5 +43,10 @@ module.exports = {
       template: path.resolve(__dirname, "./public/main.html"), //Template file path
     }),
     new CleanWebpackPlugin(), //To clean build folder after every build
+    new MiniCssExtractPlugin({
+      //To extract css to stanalone file
+      filename: "main.css",
+    }),
+    new HotModuleReplacementPlugin(),
   ],
 };
