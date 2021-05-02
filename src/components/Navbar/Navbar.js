@@ -1,7 +1,11 @@
 import React from "react";
 
+import "./Navbar.scss";
+
 const Navbar = () => {
-  return <div>Hello World, Jazz Singh, Heloo</div>;
+  const className = "c-Navbar";
+
+  return <div className={className}>Webpack React Config</div>;
 };
 
 export default Navbar;

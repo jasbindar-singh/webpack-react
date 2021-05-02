@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = () => {
   return {
     entry: {
-      main: path.resolve(__dirname, "./src/index.js"), //Entry file's path
+      main: path.resolve(__dirname, "../src/index.js"), //Entry file's path
     },
     module: {
       // Loaders
@@ -36,7 +36,7 @@ module.exports = () => {
     plugins: [
       new HTMLTemplate({
         filename: "index.html", //Output filename
-        template: path.resolve(__dirname, "./public/main.html"), //Template file path
+        template: path.resolve(__dirname, "../public/main.html"), //Template file path
       }),
       new CleanWebpackPlugin(), //To clean build folder after every build
     ],
