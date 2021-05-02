@@ -27,8 +27,9 @@ module.exports = () => {
           ], //Added scss support
         },
         {
-          test: /\.(png|jpg)$/,
-          use: ["url-loader"],
+          // Assets module
+          test: /\.(png|jpg|gif)$/i,
+          type: "asset/resource",
         },
       ],
     },
