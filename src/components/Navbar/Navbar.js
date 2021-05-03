@@ -1,9 +1,7 @@
-import React from "react";
-
-import "./Navbar.scss";
+import './Navbar.scss';
 
 const Navbar = () => {
-  const className = "c-Navbar";
+  const className = 'c-Navbar';
 
   return <div className={className}>Webpack React Config</div>;
 };

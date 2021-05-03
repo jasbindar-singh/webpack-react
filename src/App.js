@@ -1,9 +1,7 @@
-import React from "react";
+import Navbar from './components/Navbar';
+import MainLayout from './components/MainLayout';
 
-import Navbar from "./components/Navbar";
-
-import "./App.scss";
-import MainLayout from "./components/MainLayout";
+import './App.scss';
 
 const App = () => {
   return (

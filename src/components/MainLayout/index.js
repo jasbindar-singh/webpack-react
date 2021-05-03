@@ -1,2 +1,2 @@
-import MainLayout from "./MainLayout";
+import MainLayout from './MainLayout';
 export default MainLayout;

@@ -1,10 +1,9 @@
-import React from "react";
-import Logo from "../../../public/assets/logo.png";
+import Logo from '../../../public/assets/logo.png';
 
-import "./MainLayout.scss";
+import './MainLayout.scss';
 
 const MainLayout = () => {
-  const className = "c-MainLayout";
+  const className = 'c-MainLayout';
 
   return (
     <div className={className}>
